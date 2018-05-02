@@ -6,6 +6,8 @@
 
 #define VDD_VALUE 3.3
 
+#define F_GEN_PIN 25
+
 
 int i = 0;
 
@@ -71,7 +73,7 @@ void setup() {
 void loop() {
   static int timeDelay = 1;
 
-  dacWrite(25, WaveFormTable[wave_type][i]); 
+  dacWrite(F_GEN_PIN, WaveFormTable[wave_type][i]); 
   i++;
   if (i >= Num_Samples) i = 0; 
 
@@ -140,9 +142,13 @@ void serialHandleMenu()
       Serial.print(HW_MODELO);
   }
   else if ( serialCmd == "help\n" || serialCmd == "?\n") {
-      Serial.print("\tComandos : \n\thardware - Retorna o modelo do hardware\n\tversao - Retorna a versao atual do firmware\n");
-      Serial.print("\tliga - Liga o Led da placa\n\tdesliga - Desliga o Led da placa\n");
-      Serial.print("\tanalogico - Retorna o valor da entrada analogica A2\n");
+      Serial.println("\tComandos:");
+      Serial.println("\thardware - Retorna o modelo do hardware");
+      Serial.println("\tversao - Retorna a versao atual do firmware");
+      Serial.println("\tSaída analógica no pino: 25");
+      Serial.println("\tPara mudar a forma de onde, digite:");
+      Serial.println("\tSeno - Triangulo - Quadrada - Serra");
+      Serial.println("\tPara Alterar a Amplitude, digite Amplitude");
   }
   else if (serialCmd == "Seno\n") {
       wave_type = 0;
