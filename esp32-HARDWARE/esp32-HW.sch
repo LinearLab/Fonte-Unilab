@@ -1,1 +1,309 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MyLibrary
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MINI_KIT_(ESP-32) U1
+U 1 1 5AF3491C
+P 2200 3200
+F 0 "U1" H 1700 4300 60  0000 C CNN
+F 1 "MINI_KIT_(ESP-32)" H 2250 2050 60  0000 C CNN
+F 2 "myFootPrint:ESP32_MiniKIT" H 1600 2350 60  0001 C CNN
+F 3 "https://raw.githubusercontent.com/humbertokramm/Fonte-Unilab/master/esp32-HARDWARE/esp32minikit.jpg" H 1600 2350 60  0001 C CNN
+	1    2200 3200
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5400 1850 1750 1350
+U 5AF34A24
+F0 "PositiveLienarPower" 60
+F1 "PositiveLienarPower.sch" 60
+F2 "Vin" I L 5400 2250 60 
+F3 "Ctrl_P" I L 5400 2800 60 
+F4 "Out_P" O R 7150 2500 60 
+F5 "Pvalue" O L 5400 2950 60 
+$EndSheet
+$Comp
+L Conn_01x02 FG
+U 1 1 5AF34A37
+P 3900 3650
+F 0 "FG" H 3900 3750 50  0000 C CNN
+F 1 "Conn_01x02" H 3900 3450 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 3900 3650 50  0001 C CNN
+F 3 "" H 3900 3650 50  0001 C CNN
+	1    3900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34AD4
+P 3650 3750
+F 0 "#PWR?" H 3650 3500 50  0001 C CNN
+F 1 "GND" H 3650 3600 50  0000 C CNN
+F 2 "" H 3650 3750 50  0001 C CNN
+F 3 "" H 3650 3750 50  0001 C CNN
+	1    3650 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3750 3700 3750
+Wire Wire Line
+	3700 3650 3000 3650
+$Comp
+L L7805 U2
+U 1 1 5AF34B21
+P 2100 1050
+F 0 "U2" H 1950 1175 50  0000 C CNN
+F 1 "L7805" H 2100 1175 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Horizontal" H 2125 900 50  0001 L CIN
+F 3 "" H 2100 1000 50  0001 C CNN
+	1    2100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34BEF
+P 2100 1350
+F 0 "#PWR?" H 2100 1100 50  0001 C CNN
+F 1 "GND" H 2100 1200 50  0000 C CNN
+F 2 "" H 2100 1350 50  0001 C CNN
+F 3 "" H 2100 1350 50  0001 C CNN
+	1    2100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5AF34C09
+P 3050 1050
+F 0 "#PWR?" H 3050 900 50  0001 C CNN
+F 1 "+5V" H 3050 1190 50  0000 C CNN
+F 2 "" H 3050 1050 50  0001 C CNN
+F 3 "" H 3050 1050 50  0001 C CNN
+	1    3050 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 5AF34C23
+P 1150 1050
+F 0 "#PWR?" H 1150 900 50  0001 C CNN
+F 1 "VCC" H 1150 1200 50  0000 C CNN
+F 2 "" H 1150 1050 50  0001 C CNN
+F 3 "" H 1150 1050 50  0001 C CNN
+	1    1150 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1050 1800 1050
+Wire Wire Line
+	2400 1050 3050 1050
+$Comp
+L +5V #PWR?
+U 1 1 5AF34C5B
+P 1200 2750
+F 0 "#PWR?" H 1200 2600 50  0001 C CNN
+F 1 "+5V" H 1200 2890 50  0000 C CNN
+F 2 "" H 1200 2750 50  0001 C CNN
+F 3 "" H 1200 2750 50  0001 C CNN
+	1    1200 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2750 1400 2750
+$Comp
+L GND #PWR?
+U 1 1 5AF34C7F
+P 3000 4150
+F 0 "#PWR?" H 3000 3900 50  0001 C CNN
+F 1 "GND" H 3000 4000 50  0000 C CNN
+F 2 "" H 3000 4150 50  0001 C CNN
+F 3 "" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34C9C
+P 1250 4050
+F 0 "#PWR?" H 1250 3800 50  0001 C CNN
+F 1 "GND" H 1250 3900 50  0000 C CNN
+F 2 "" H 1250 4050 50  0001 C CNN
+F 3 "" H 1250 4050 50  0001 C CNN
+	1    1250 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34CB6
+P 1250 2950
+F 0 "#PWR?" H 1250 2700 50  0001 C CNN
+F 1 "GND" H 1250 2800 50  0000 C CNN
+F 2 "" H 1250 2950 50  0001 C CNN
+F 3 "" H 1250 2950 50  0001 C CNN
+	1    1250 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2950 1400 2950
+Wire Wire Line
+	1250 4050 1400 4050
+$Comp
+L C C3
+U 1 1 5AF34D42
+P 2550 1200
+F 0 "C3" H 2575 1300 50  0000 L CNN
+F 1 "100nF/50V" H 2600 1100 50  0000 L CNN
+F 2 "" H 2588 1050 50  0001 C CNN
+F 3 "" H 2550 1200 50  0001 C CNN
+	1    2550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5AF34D6F
+P 1650 1200
+F 0 "C2" H 1675 1300 50  0000 L CNN
+F 1 "100nF/50V" H 1200 1100 50  0000 L CNN
+F 2 "" H 1688 1050 50  0001 C CNN
+F 3 "" H 1650 1200 50  0001 C CNN
+	1    1650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 5AF34DBE
+P 1150 1200
+F 0 "C1" H 1175 1300 50  0000 L CNN
+F 1 "100uF/35V" H 700 1100 50  0000 L CNN
+F 2 "" H 1188 1050 50  0001 C CNN
+F 3 "" H 1150 1200 50  0001 C CNN
+	1    1150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C4
+U 1 1 5AF34E35
+P 3050 1200
+F 0 "C4" H 3075 1300 50  0000 L CNN
+F 1 "100uF/6,3V" H 3075 1100 50  0000 L CNN
+F 2 "" H 3088 1050 50  0001 C CNN
+F 3 "" H 3050 1200 50  0001 C CNN
+	1    3050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34E84
+P 2550 1350
+F 0 "#PWR?" H 2550 1100 50  0001 C CNN
+F 1 "GND" H 2550 1200 50  0000 C CNN
+F 2 "" H 2550 1350 50  0001 C CNN
+F 3 "" H 2550 1350 50  0001 C CNN
+	1    2550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34EA6
+P 3050 1350
+F 0 "#PWR?" H 3050 1100 50  0001 C CNN
+F 1 "GND" H 3050 1200 50  0000 C CNN
+F 2 "" H 3050 1350 50  0001 C CNN
+F 3 "" H 3050 1350 50  0001 C CNN
+	1    3050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34EC8
+P 1650 1350
+F 0 "#PWR?" H 1650 1100 50  0001 C CNN
+F 1 "GND" H 1650 1200 50  0000 C CNN
+F 2 "" H 1650 1350 50  0001 C CNN
+F 3 "" H 1650 1350 50  0001 C CNN
+	1    1650 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AF34EEA
+P 1150 1350
+F 0 "#PWR?" H 1150 1100 50  0001 C CNN
+F 1 "GND" H 1150 1200 50  0000 C CNN
+F 2 "" H 1150 1350 50  0001 C CNN
+F 3 "" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2550 1050
+Connection ~ 1650 1050
+Connection ~ 3050 1050
+Connection ~ 1150 1050
+Wire Wire Line
+	5400 2800 4200 2800
+Wire Wire Line
+	4200 2800 4200 3050
+Wire Wire Line
+	4200 3050 3000 3050
+$Comp
+L Conn_01x03 OUT
+U 1 1 5AF37B8B
+P 8750 2500
+F 0 "OUT" H 8750 2700 50  0000 C CNN
+F 1 "Conn_01x03" H 8750 2300 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-41791-03_03x3.96mm_Straight" H 8750 2500 50  0001 C CNN
+F 3 "" H 8750 2500 50  0001 C CNN
+	1    8750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2950 4400 2950
+Wire Wire Line
+	4400 2950 4400 3150
+Wire Wire Line
+	4400 3150 3000 3150
+$EndSCHEMATC

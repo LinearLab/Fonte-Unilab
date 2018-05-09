@@ -1,4 +1,4 @@
-update=02/05/2018 15:58:01
+update=09/05/2018 17:21:40
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=
+LibDir=C:/Users/humbertock/Documents/GitHub/myKicadLibrary
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -59,5 +59,6 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=MyLibrary
 [general]
 version=1
